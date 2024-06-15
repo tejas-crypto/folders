@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background-image: url(flowers.jpg); /* If you want to use an image */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.message {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.balloons {
+    position: relative;
+    height: 200px;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: #ff4e50;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    animation: float 4s ease-in-out infinite;
+}
+
+#balloon1 {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+#balloon2 {
+    left: 50%;
+    animation-delay: 1s;
+    background-color: #fc913a;
+}
+
+#balloon3 {
+    left: 80%;
+    animation-delay: 2s;
+    background-color: #f9d62e;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #fc913a;
+}
+
+#fireworks-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}

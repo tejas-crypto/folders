@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body covers the full viewport height */
+    background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4);
+    font-family: 'Arial', sans-serif;
+    overflow: auto;
+    background-image: url(flowers.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    background: linear-gradient(135deg, #7f7fd5, #86a8e7, #91eae4); /* Matching gradient */
+    width: 100%;
+    padding: 20px 0; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.container h1, .container p {
+    color: #fff; /* Text color */
+}
+
+.content {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.birthday-image {
+    width: 300px;
+    border: 6px solid transparent;
+    border-image: linear-gradient(135deg, #000000, #ff0000, #00ffee);
+    border-image-slice: 1;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+    padding: 10px 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+#fireworks-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}

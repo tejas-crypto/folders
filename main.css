@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    overflow: auto;
+    background-image: url(super.jpg);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-size: cover;
+}
+#home{
+    width: 30px;
+    height: 30px;
+}
+h1{
+    background:linear-gradient(to left, skyblue, lightgreen); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-shadow: 0px 0px 6px rgb(104, 238, 42),0px 6px 6px rgb(68, 238, 241);
+}
+#content{
+    background:linear-gradient(to right, skyblue,lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-shadow: 0px 0px 6px rgb(236, 74, 68),0px 6px 6px rgb(214, 197, 39); 
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* Existing styles... */
+
+.switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 30px; 
+    height: 17px;  
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(13px);
+  }
+  
+  .slider.round {
+    border-radius: 17px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  body.dark-mode {
+    background-color: #222;
+    color: white;
+  }
+  
+  body.dark-mode .navbar {
+    background-color: #333;
+  }
+  
+  body.dark-mode .navbar a {
+    color: #ddd;
+  }
+  
+  body.dark-mode .navbar a:hover {
+    background-color: #444;
+  }
+  html, body {
+    height: 100%;
+    position: relative;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background .5s ease-in-out;
+    pointer-events: none;
+  }
+  
+  body.dark-mode::before {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+    
+   
