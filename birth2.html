@@ -6,6 +6,9 @@
     <title>Surprise!</title>
     <link rel="icon" href="Tejas.png" type="image/x-icon">
     <link rel="stylesheet" href="birth2.css">
+  <link rel="preload" href="path/to/image.jpg" as="image">
+  <link rel="preload" href="path/to/video.mp4" as="video">
+  <link rel="preload" href="path/to/audio.mp3" as="audio">
 </head>
 <body>
     <header class="header">
@@ -27,5 +30,37 @@
     </div>
     
     <script src="birth2.js"></script>
+    <script>
+  function preloadMedia(src, type) {
+    return new Promise((resolve, reject) => {
+      let media;
+      if (type === 'image') {
+        media = new Image();
+      } else if (type === 'video' || type === 'audio') {
+        media = document.createElement(type);
+        media.preload = 'auto';
+      }
+      media.src = src;
+      media.onload = () => resolve(src);
+      media.onerror = () => reject(new Error(`Failed to load ${src}`));
+    });
+  }
+
+  const mediaFiles = [
+    {src: 'path/to/image.jpg', type: 'image'},
+    {src: 'path/to/video.mp4', type: 'video'},
+    {src: 'path/to/audio.mp3', type: 'audio'}
+  ];
+
+  Promise.all(mediaFiles.map(file => preloadMedia(file.src, file.type)))
+    .then(() => {
+      console.log('All media files loaded');
+      // Continue with other tasks, such as initializing your app or showing content
+    })
+    .catch(err => {
+      console.error('Error loading media files', err);
+    });
+</script>
+
 </body>
 </html>
