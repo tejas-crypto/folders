@@ -16,3 +16,7 @@ body {
 #heading, p {
     text-align: center;
 }
+p {
+      text-shadow: 0px 0px 7px rgb(3, 70, 255);
+    box-shadow: 0px 0px 5px 1px gray;   
+}
